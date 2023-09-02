@@ -1,1 +1,79 @@
+/* GENERAL STYLES */
+    :root {
+        /* COLORS */
+        --purple: #af00ffff;
+        --yellow: #ffcc00;
+        /* SIZINGS */
+        --image-size: 80px;
+    }
 
+/* NAVBAR SECTION */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--purple);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0;
+    position: relative;
+}
+
+.navbar .menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.navbar .menu li {
+    color: white;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+.navbar .menu li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.navbar img {
+    width: var(--image-size);
+}
+
+.mascot-greeting {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: var(--image-size);
+    height: var(--image-size);
+    box-sizing: border-box;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: var(--purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mascot {
+    border-radius: 50%;
+    z-index: 2;
+    transition: opacity 0.2s;
+}
+
+#mascot:hover {
+    opacity: 0;
+    cursor: none;
+}
+
+/* ABOUT SECTION */
+/* PAST EVENTS SECTION */
+/* SPONSORS SECTION */
+/* CONTACTS SECTION */
