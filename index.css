@@ -11,7 +11,9 @@ body {
     font-family: 'Vollkorn', serif;
     margin: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
@@ -22,6 +24,10 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     font-weight: 700;
+}
+
+h3 {
+    font-size: 1.6rem;
 }
 
 p {
@@ -46,6 +52,7 @@ p {
     padding: 10px 20px;
     margin: 0;
     position: fixed;
+    z-index: 2;
 }
 
 .navbar .menu {
@@ -216,5 +223,150 @@ p {
 }
 
 /* PAST EVENTS SECTION */
+.past-events-section {
+    width: 100%;
+    max-width: 1144px;
+    display: flex;
+    justify-self: center;
+}
+
+/*.past-events-section .section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}*/
+
+.past-events-section .event-container-1 {
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "general-photo general-photo density-activity"
+    "general-photo general-photo momentum-activity"
+    "turbulance-activity vr-activity bridges-activity";
+    grid-gap: 20px;
+    padding: 30px;
+    background-color: var(--yellow);
+    border-radius: 20px;
+}
+
+.past-events-section .event-container-1 img {
+    object-fit: cover;
+    width: 100%;
+    height: 90%;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.past-events-section p {
+    text-align: center;
+}
+
+#event-name {
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.general-photo {
+    grid-area: general-photo;
+    
+}
+
+.density-activity {
+    grid-area: density-activity;
+}
+
+.momentum-activity {
+    grid-area: momentum-activity;
+}
+
+.turbulance-activity {
+    grid-area: turbulance-activity;
+}
+
+.vr-activity {
+    grid-area: vr-activity;
+}
+
+.bridges-activity {
+    grid-area: bridges-activity;
+}
+
+.past-events-section .event-container-2 {
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "name name name"
+    "charades taxonomy tension";
+    grid-gap: 20px;
+    padding: 30px;
+    background-color: var(--yellow);
+    border-radius: 20px;
+}
+
+.past-events-section .event-container-2 #event-name {
+    grid-area: name;
+    padding: 0;
+}
+
+.charades {
+    grid-area: charades;
+}
+
+.taxonomy {
+    grid-area: taxonomy;
+}
+
+.surfacetension {
+    grid-area: tension;
+}
+
+.past-events-section .event-container-2 img {
+    object-fit: cover;
+    width: 100%;
+    height: 90%;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.past-events-section .event-container-3 {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-areas: 
+    "group circuit"
+    "robot oobleck";
+    grid-gap: 20px;
+    padding: 30px;
+    padding-bottom: 0;
+    background-color: var(--yellow);
+    border-radius: 20px;
+}
+
+.group-photo {
+    grid-area: group;
+}
+
+.robot {
+    grid-area: robot;
+}
+
+.circuits {
+    grid-area: circuit;
+}
+
+.oobleck {
+    grid-area: oobleck;
+}
+
+.past-events-section .event-container-3 img {
+    object-fit: cover;
+    width: 100%;
+    height: 90%;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
 /* SPONSORS SECTION */
 /* CONTACTS SECTION */
