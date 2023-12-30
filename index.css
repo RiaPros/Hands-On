@@ -1,7 +1,8 @@
 /* GENERAL STYLES */
 :root {
     /* COLORS */
-    --purple: #af00ffff;
+    --purple: #af00ff;
+    --purplel: #af00ff20;
     --yellow: #ffcc00;
     /* SIZINGS */
     --image-size: 80px;
@@ -117,10 +118,6 @@ p {
     width: 100%;
     max-width: 1144px;
     padding: 100px 0 0 0;
-    position: relative;
-}
-
-.about-section .section-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -213,29 +210,34 @@ p {
 .tv-photo-frame .left {
     transform: rotate(40deg);
     top: 85px;
-    right: 210px;
+    right: 510px;
 }
 
 .tv-photo-frame .right {
     transform: rotate(-40deg);
     top: 85px;
-    right: 50px;
+    right: 350px;
 }
 
 /* PAST EVENTS SECTION */
-.past-events-section {
+.past-events-section::before {
+    content: "";
     width: 100%;
-    max-width: 1144px;
-    display: flex;
-    justify-self: center;
+    height: 425%;
+    background-color: var(--purplel);
+    position: absolute;
+    top: 455px;
+    left: 0;
+    z-index: -2;
+    transform: skewY(-5deg);
 }
 
-/*.past-events-section .section-container {
+.past-events-section {
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: start;
-}*/
+}
 
 .past-events-section .event-container-1 {
     width: 100%;
@@ -369,4 +371,59 @@ p {
 }
 
 /* SPONSORS SECTION */
+.sponsors-section {
+    width: 100%;
+    max-width: 1144px;
+    display: flex;
+    justify-self: center;
+    align-items: start;
+    padding-top: 20px;
+}
+
+.sponsors-section img {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid var(--purple);
+}
+
+.sponsors-section .two-column > .right-column {
+    justify-content: start;
+}
+
+.sponsors-section p {
+    text-align: center;
+    padding: 5px;
+}
 /* CONTACTS SECTION */
+.contacts-section { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.contacts-section p {
+    text-align: center;
+}
+
+#committee {
+    padding: 20px 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.contacts-section .executives {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contacts-section .executives img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* FOOTER */
+
